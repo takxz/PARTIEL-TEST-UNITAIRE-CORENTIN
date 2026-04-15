@@ -17,3 +17,6 @@ class Adherent:
         if not self.peut_payer(montant):
             raise ValueError("Solde insuffisant pour effectuer le paiement.")
         self.solde -= montant
+
+    def modification_registre():
+        pass

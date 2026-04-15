@@ -102,3 +102,15 @@ def test_reservation_si_solde_insuffisant():
         adherent.payer(reservation.calculer_prix())
     
 
+def test_modification_registre(mocker):
+    adherent = Adherent(id=1, type_abonnement=Abonnement.TICKET, solde=10)
+    mock_modification = mocker.patch.object(
+        Adherent,
+        "modification_registre",
+        return_value=["https://notreclubdesport.fr/tennis/reservations.txt"],
+    )
+
+    registre = adherent.modification_registre("tennis")
+    assert registre == ["https://notreclubdesport.fr/tennis/reservations.txt"]
+    mock_modification.assert_called_once_with("tennis")
+

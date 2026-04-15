@@ -3,3 +3,4 @@ packaging==26.1
 pluggy==1.6.0
 Pygments==2.20.0
 pytest==9.0.3
+pytest-mock==3.14.1
