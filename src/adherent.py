@@ -12,3 +12,8 @@ class Adherent:
 
     def peut_payer(self, montant):
         return self.solde >= montant
+    
+    def payer(self, montant):
+        if not self.peut_payer(montant):
+            raise ValueError("Solde insuffisant pour effectuer le paiement.")
+        self.solde -= montant
