@@ -4,9 +4,11 @@ from src.prix_sans_abonnement import PrixSansAbonnement
 from src.abonnement import Abonnement
 from src.type_salle import TypeSalle
 from datetime import datetime
+from src.salle import Salle
 
 class Reservation:
-    def __init__(self, type_salle: TypeSalle, horaire: datetime, abonnement: Abonnement, temps_jeu: TempsJeu, prix_sans_abonnement: PrixSansAbonnement, prix_avec_abonnement: PrixAvecAbonnement):
+    def __init__(self, salle: Salle, type_salle: TypeSalle, horaire: datetime, abonnement: Abonnement, temps_jeu: TempsJeu, prix_sans_abonnement: PrixSansAbonnement, prix_avec_abonnement: PrixAvecAbonnement):
+        self.salle = salle
         self.type_salle = type_salle
         self.horaire = horaire
         self.abonnement = abonnement

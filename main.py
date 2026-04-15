@@ -15,6 +15,7 @@ def main():
     adherent1 = Adherent(id=1, type_abonnement=Abonnement.FORFAIT, solde=100)
     adherent2 = Adherent(id=2, type_abonnement=Abonnement.TICKET, solde=50)
     reservation = Reservation(
+        salle=salle1,
         type_salle=TypeSalle.TENNIS,
         horaire=datetime(2024, 6, 1, 10, 0),
         abonnement=Abonnement.FORFAIT,
