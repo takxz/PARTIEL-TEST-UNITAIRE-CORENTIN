@@ -10,4 +10,5 @@ class Adherent:
     def __repr__(self):
         return f"Adherent(id={self.id}, type_abonnement={self.type_abonnement}, solde={self.solde})"
 
-    
+    def peut_payer(self, montant):
+        return self.solde >= montant
